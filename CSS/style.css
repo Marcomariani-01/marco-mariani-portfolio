@@ -17,7 +17,7 @@
   --font-heading: "Cormorant Garamond", serif;
   --font-body: "Inter", sans-serif;
 
-  --container-width: 1280px;
+  --container-width: 1220px;
 }
 
 /* ====================================
@@ -198,36 +198,286 @@ p {
   height: auto;
 }
 
+/
 /* ====================================
-   05 — TEMPORARY SECTIONS
+   05 — SELECTED WORK
 ==================================== */
 
-.work-section,
-.placeholder-section,
-.placeholder-footer {
-  padding: 80px 0;
-}
-
 .work-section {
-  background: var(--surface-soft);
+  padding: 96px 0;
+  background-color: var(--surface-soft);
 }
 
-.placeholder-footer {
-  background: var(--midnight);
-  color: var(--cream);
+/* Section heading */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
 }
 
-h2 {
+.section-heading h2 {
+  margin: 0;
   font-family: var(--font-heading);
   font-size: 44px;
   font-weight: 600;
+  line-height: 1.15;
+  white-space: nowrap;
 }
+
+.section-heading-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-label {
+  margin: 0;
+  color: var(--vermilion);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Projects grid */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Project card */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* Project image */
+
+.project-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #E9E2D7;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Project content */
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  gap: 24px;
+  padding: 32px;
+}
+
+.project-info {
+  flex: 1;
+}
+
+.project-category {
+  margin: 0 0 12px;
+  color: var(--vermilion);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  margin: 0 0 16px;
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.project-description {
+  max-width: 480px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.625;
+}
+
+/* Secondary button */
+
+.button-secondary {
+  border: 1px solid var(--midnight);
+  background: transparent;
+  color: var(--midnight);
+}
+
+.button-secondary:hover {
+  background: var(--midnight);
+  color: #fff;
+}
+
+.project-link {
+  margin-top: auto;
+}
+
+
+
+
+
+/* ====================================
+   06 — ABOUT ME
+==================================== */
+
+.about-section {
+  padding: 96px 0;
+  background-color: var(--cream);
+}
+
+/* Section heading */
+
+.about-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.about-section-heading h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.about-heading-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border);
+}
+
+/* Main layout */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Portrait */
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--midnight);
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Text content */
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.about-content h3 {
+  max-width: 620px;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.14;
+}
+
+.about-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-paragraphs p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.625;
+}
+
+/* About link */
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--vermilion);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.about-link:hover {
+  text-decoration: underline;
+}
+
+.about-link span {
+  transition: transform 200ms ease;
+}
+
+.about-link:hover span {
+  transform: translateX(4px);
+}
+
+
 
 /* ====================================
    06 — TABLET
 ==================================== */
 
 @media (max-width: 1024px) {
+
+/* About Me — Tablet */
+
+.about-grid {
+  gap: 40px;
+}
+
+.about-content h3 {
+  font-size: 36px;
+}
+
+.about-section-heading h2 {
+  font-size: 40px;
+}
+
+
   .hero {
     padding: 80px 0;
   }
@@ -246,6 +496,8 @@ h2 {
 ==================================== */
 
 @media (max-width: 767px) {
+
+    
 
   .nav-container {
     min-height: 72px;
@@ -350,6 +602,76 @@ h2 {
   .placeholder-footer {
     padding: 64px 0;
   }
+
+
+
+/* ====================================
+   SELECTED WORK — MOBILE
+==================================== */
+
+.work-section {
+  padding: 64px 0;
+}
+
+/* Section heading */
+
+.section-heading {
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.section-heading-line,
+.section-label {
+  display: none;
+}
+
+/* Project cards */
+
+.projects-grid {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.project-card {
+  width: 100%;
+}
+
+.project-content {
+  padding: 24px;
+  gap: 24px;
+}
+
+.project-card h3 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.project-category {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.project-description {
+  font-size: 16px;
+  line-height: 1.625;
+}
+
+/* Project images */
+
+.project-image {
+  aspect-ratio: 16 / 10;
+}
+
+.project-image img {
+  object-fit: contain;
+}
+
 }
 
 /* ====================================
@@ -372,4 +694,7 @@ button:focus-visible {
   *::after {
     transition-duration: 0.01ms !important;
   }
+}
+.work-section {
+  background-color: var(--surface-soft) !important;
 }
