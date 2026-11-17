@@ -66,15 +66,23 @@ p {
   margin-top: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 104px;
+}
 /* ====================================
    03 — NAVIGATION
 ==================================== */
 
+
 .site-header {
-  position: relative;
-  z-index: 10;
-  background: var(--cream);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--cream);
+  border-bottom: 1px solid var(--border);
 }
+
 
 .nav-container {
   min-height: 88px;
@@ -406,21 +414,24 @@ p {
 
 /* Text content */
 
+
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 28px;
+  max-width: 650px;
 }
 
 .about-content h3 {
-  max-width: 620px;
+  max-width: 580px;
   margin: 0;
   font-family: var(--font-heading);
   font-size: 44px;
   font-weight: 600;
   line-height: 1.14;
 }
+
 
 .about-paragraphs {
   display: flex;
@@ -475,39 +486,42 @@ p {
 
 /* Skills grid */
 
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 48px;
-  row-gap: 48px;
+  row-gap: 40px;
 }
 
+
 /* Individual skill */
+
 
 .skill-item {
   min-width: 0;
   border-top: 1px solid var(--border);
-  padding-top: 24px;
+  padding-top: 20px;
 }
 
 .skill-number {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   color: var(--vermilion);
-  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 600;
   line-height: 1.5;
 }
 
 .skill-item h3 {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
   color: var(--midnight);
   font-family: var(--font-heading);
   font-size: 32px;
   font-weight: 600;
   line-height: 1.2;
 }
+
 
 .skill-item p {
   margin: 0;
@@ -538,7 +552,7 @@ p {
   align-items: flex-start;
   gap: 24px;
   max-width: 850px;
-  margin-bottom: 96px;
+  margin-bottom: 72px;
 }
 
 .footer-eyebrow {
@@ -589,7 +603,7 @@ p {
   align-items: flex-start;
   justify-content: space-between;
   gap: 48px;
-  padding-top: 40px;
+  padding-top: 32px;
   border-top: 1px solid #56636A;
 }
 
@@ -644,7 +658,7 @@ p {
 /* Copyright */
 
 .footer-copyright {
-  margin: 48px 0 0;
+  margin: 32px 0 0;
   color: var(--parchment);
   font-size: 12px;
   line-height: 1.5;
@@ -730,7 +744,9 @@ p {
 /* ====================================
    CONTACT & FOOTER — MOBILE
 ==================================== */
-
+html {
+  scroll-padding-top: 88px;
+}
 .site-footer {
   padding: 64px 0 32px;
 }
