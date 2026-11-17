@@ -41,3 +41,13 @@ if (menuToggle && mobileNav) {
     }
   });
 }
+
+/* ====================================
+   FOOTER — CURRENT YEAR
+==================================== */
+
+const yearElement = document.querySelector("#current-year");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}

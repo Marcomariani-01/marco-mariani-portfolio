@@ -516,10 +516,162 @@ p {
 
 
 /* ====================================
+   CONTACT & FOOTER
+==================================== */
+
+.site-footer {
+  padding: 96px 0 40px;
+  background-color: var(--midnight);
+  color: var(--cream);
+}
+
+/* Contact CTA */
+
+.footer-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 850px;
+  margin-bottom: 96px;
+}
+
+.footer-eyebrow {
+  margin: 0;
+  color: var(--ochre);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-cta h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 1.055;
+  color: var(--cream);
+}
+
+.footer-description {
+  max-width: 600px;
+  margin: 0;
+  color: var(--parchment);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Contact button */
+
+.footer-button {
+  min-height: 48px;
+  padding: 12px 24px;
+  background-color: var(--cream);
+  color: var(--midnight);
+  border: 1px solid var(--cream);
+}
+
+.footer-button:hover {
+  background-color: var(--parchment);
+  border-color: var(--parchment);
+}
+
+/* Footer bottom */
+
+.footer-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+  padding-top: 40px;
+  border-top: 1px solid #56636A;
+}
+
+.footer-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-name {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.footer-role {
+  margin: 0;
+  color: var(--parchment);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Professional links */
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 24px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--cream);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.footer-links a span {
+  color: var(--ochre);
+}
+
+.footer-links a:hover {
+  color: var(--parchment);
+}
+
+/* Copyright */
+
+.footer-copyright {
+  margin: 48px 0 0;
+  color: var(--parchment);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+
+
+
+/* ====================================
    06 — TABLET
 ==================================== */
 
 @media (max-width: 1024px) {
+
+
+/* Contact & Footer — Tablet */
+
+.footer-cta h2 {
+  font-size: 56px;
+}
+
+.footer-bottom {
+  gap: 32px;
+}
+
+.footer-links {
+  grid-template-columns: repeat(2, max-content);
+  column-gap: 40px;
+  row-gap: 8px;
+}
+
 
 
 /* Approach & Skills — Tablet */
@@ -568,6 +720,57 @@ p {
 ==================================== */
 
 @media (max-width: 767px) {
+
+
+/* ====================================
+   CONTACT & FOOTER — MOBILE
+==================================== */
+
+.site-footer {
+  padding: 64px 0 32px;
+}
+
+.footer-cta {
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.footer-cta h2 {
+  font-size: 44px;
+  line-height: 1.09;
+}
+
+.footer-description {
+  font-size: 16px;
+  line-height: 1.625;
+}
+
+.footer-bottom {
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 32px;
+}
+
+.footer-name {
+  font-size: 28px;
+}
+
+.footer-links {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 8px;
+}
+
+.footer-links a {
+  min-height: 44px;
+  font-size: 16px;
+}
+
+.footer-copyright {
+  margin-top: 32px;
+}
+
 
 
 /* ====================================
