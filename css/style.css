@@ -665,7 +665,46 @@ html {
 }
 
 
+/* Logo nella navbar */
 
+/* Logo e nome nella navbar */
+
+.site-logo {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.site-logo-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.site-logo span {
+  display: inline-block;
+}
+
+.site-logo span {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--midnight);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .site-logo-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
 
 
 /* ====================================
